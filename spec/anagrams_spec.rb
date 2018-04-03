@@ -1,6 +1,11 @@
 require_relative '../anagrams'
 
 describe 'anagrams?' do
+  it 'finds anagrams that have the same characters'  do
+    expect(anagrams?('lemon', 'melon')).to be true
+    expect(anagrams?('bike', 'lemon')).to be false
+  end
+
   it 'finds anagrams if characters are not in order' do
     expect(anagrams?('lemon', 'melon')).to be true
     expect(anagrams?('melon', 'lemon')).to be true
