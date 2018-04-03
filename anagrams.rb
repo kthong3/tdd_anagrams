@@ -1,3 +1,7 @@
 def anagrams?(word, possible_anagram)
-  word.downcase.split("").sort == possible_anagram.downcase.split("").sort
+  canonical_form(word) == canonical_form(possible_anagram)
+end
+
+def canonical_form(word)
+  word.downcase.split("").sort
 end
